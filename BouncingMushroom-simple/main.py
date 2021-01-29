@@ -31,7 +31,7 @@ class main:
             # 清除屏幕
             window.fill((0,0,0))
             # draw here
-            window.blit(mushroom, (mushroom_rect.x,mushroom_rect.y))
+            window.blit(mushroom, mushroom_rect.topleft)
             # 绘制屏幕
             pygame.display.update()
 
