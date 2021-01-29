@@ -5,13 +5,12 @@ class main:
     def __init__(self):
         # 初始化 pygame
         pygame.init()
-
+        # 创建一个窗口
         window = pygame.display.set_mode([640, 480])
 
         mushroom = pygame.image.load(r'F:\workspace\BouncingMushroom-usePygame\BouncingMushroom-simple\Mushroom.png')
 
         mushroom_rect = mushroom.get_rect()
-
 
         increment = [1, 1]
 
