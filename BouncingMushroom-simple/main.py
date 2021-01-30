@@ -8,7 +8,7 @@ class main:
         # 创建一个窗口
         window = pygame.display.set_mode([640, 480])
 
-        mushroom = pygame.image.load(r'F:\workspace\BouncingMushroom-usePygame\BouncingMushroom-simple\Mushroom.png')
+        mushroom = pygame.image.load(r'F:\workspace\BouncingMushroom-usePygame\BouncingMushroom-simple\Assets\Mushroom.png')
 
         mushroom_rect = mushroom.get_rect()
 
