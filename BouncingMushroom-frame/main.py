@@ -8,7 +8,7 @@ class main:
         pygame.init()
 
         game = Game()
-        while game.GetWindow().IsDone() == False:
+        while not game.GetWindow().IsDone():
             game.HandleInput()
             game.Update()
             game.Render()
