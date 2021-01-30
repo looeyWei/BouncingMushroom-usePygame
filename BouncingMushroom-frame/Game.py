@@ -15,7 +15,7 @@ class Game:
     def Update(self):
         self.window.Update()
 
-        self.mushroom.Move()
+        self.mushroom.Update()
 
 
     def Render(self):

@@ -2,11 +2,24 @@
 import pygame
 
 class Window:
-    def __init__(self):
-        self.windowSize = (640, 480)
+    def __init__(self, windowTitle = None, windowSize = None):
+        
+        if windowTitle == None:
+            windowTitle = "Bouncing Mushroom"
+        if windowSize == None:
+            windowSize = (640, 480)
+
+        self.SetUp(windowTitle, windowSize)
+
+    # 初始化窗口
+    def SetUp(self, windowTitle, windowSize):
+        
+        self.windowTitle = windowTitle
+        self.windowSize = windowSize
 
         self.window = pygame.display.set_mode(self.windowSize)
-        
+        pygame.display.set_caption(self.windowTitle)
+
         self.done = False
 
     # 窗口事件
@@ -19,9 +32,11 @@ class Window:
     def BeginDraw(self):
         self.window.fill((0,0,0))
 
+    # 在窗口中画别的东西
     def Draw(self, drawable, topleft):
         self.window.blit(drawable, topleft)
 
+    # 将画的东西展示出来
     def EndDraw(self):
         pygame.display.update()
 
